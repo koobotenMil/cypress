@@ -4,12 +4,12 @@ describe("TodoList",()=>{
     });
 
     it('Deve ser possivel adicionar uma nova tarefa clicando no botão "Criar tarefa".', () => {
-        cy.get('#todo_title').type('Estudar')
+        cy.get('#todo_title').type('Correr')
         cy.get('[data-cy="createdTask"]').click()
-        cy.get('#todo_title').type('Ler uma HQ')
+        cy.get('#todo_title').type('Nadar')
         cy.get('[data-cy="createdTask"]').click()
-        cy.contains('Estudar').should('be.visible');
-        cy.contains('Ler uma HQ').should('be.visible');
+        cy.contains('Correr').should('be.visible');
+        cy.contains('Nadar').should('be.visible');
     });
 
     it('Deve ser possivel adicionar uma nova tarefa pressionando ENTER.', () => {
